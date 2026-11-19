@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuizLab — генератор тестів</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header><div class="brand">QuizLab<span> / AI</span></div><span class="local">● Локальна модель · Ollama</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">НАВЧАЛЬНИЙ ІНСТРУМЕНТ</p><h1>Перевір свої знання.</h1><p>Обери тему, створи тест за допомогою ШІ та дізнайся свій результат.</p></section>
+    <section class="panel">
+      <h2>Налаштування тесту</h2>
+      <form id="generator">
+        <label for="topic">Тема або навчальний матеріал</label>
+        <textarea id="topic" maxlength="500" rows="3" placeholder="Наприклад: принципи ООП, 4 питання про інкапсуляцію та спадкування" required></textarea>
+        <div class="settings">
+          <label>Кількість питань<select id="count"><option>3</option><option selected>5</option><option>8</option></select></label>
+          <label>Складність<select id="difficulty"><option>Легка</option><option selected>Середня</option><option>Складна</option></select></label>
+          <label>Мова тесту<select id="language"><option>Українська</option><option>Англійська</option><option>Італійська</option><option>Німецька</option><option>Китайська</option></select></label>
+        </div>
+        <button id="generate" type="submit">Створити тест →</button>
+        <p id="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <section id="quiz" class="panel" hidden>
+      <div class="quiz-heading"><h2 id="quiz-title">Тест</h2><span id="progress"></span></div>
+      <div id="questions"></div>
+      <button id="check" type="button">Перевірити відповіді</button>
+      <div id="result" role="status" aria-live="polite" hidden></div>
+    </section>
+    <footer>Qwen3-4B-Instruct · Q4_K_M · без хмарного API</footer>
+  </main>
+</body>
+</html>

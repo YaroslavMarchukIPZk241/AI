@@ -1,0 +1,13 @@
+label,model,concurrency,requests,errors,ttft_p50_s,ttft_p95_s,tokens_per_s_per_user_p50,throughput_tokens_per_s,reasoning
+before,qwen3:4b-instruct-2507-q4_K_M,1,16,0,2.097,2.117,82.5,35.8,False
+before,qwen3:4b-instruct-2507-q4_K_M,2,16,0,2.412,4.279,84.0,61.8,False
+before,qwen3:4b-instruct-2507-q4_K_M,4,16,0,5.117,7.166,84.6,77.2,False
+before,qwen3:4b-instruct-2507-q4_K_M,8,16,0,10.374,13.109,84.6,78.4,False
+after,hf.co/bartowski/Qwen_Qwen3-4B-Instruct-2507-GGUF:Q6_K,1,16,2,2.064,2.109,71.8,33.5,False
+after,hf.co/bartowski/Qwen_Qwen3-4B-Instruct-2507-GGUF:Q6_K,2,16,2,2.609,4.622,71.4,54.2,False
+after,hf.co/bartowski/Qwen_Qwen3-4B-Instruct-2507-GGUF:Q6_K,4,16,2,5.66,6.951,70.8,65.3,False
+after,hf.co/bartowski/Qwen_Qwen3-4B-Instruct-2507-GGUF:Q6_K,8,16,2,12.951,14.579,71.6,66.1,False
+demo,qwen3:4b-instruct-2507-q4_K_M,1,16,0,2.091,2.124,83.1,36.2,False
+demo,qwen3:4b-instruct-2507-q4_K_M,2,16,0,2.41,4.243,83.7,62.1,False
+demo,qwen3:4b-instruct-2507-q4_K_M,4,16,0,5.086,7.169,84.5,77.0,False
+demo,qwen3:4b-instruct-2507-q4_K_M,8,16,0,11.394,12.595,84.4,77.2,False
